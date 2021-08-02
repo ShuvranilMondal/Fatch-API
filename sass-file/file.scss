@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #00356B;
+}
+
+@mixin container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+@mixin tran {
+    transition: all 0.3s ease-in-out;
+}
+.navbar{
+    width: 100%;
+    height: 6rem;
+    background-color: rgba(255, 255, 255, 0.438);
+
+    .nav-container{
+        @include container;
+        height: 100%;
+
+        .navitem{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .nav-logo{
+                font-size: 3rem;
+                cursor: pointer;
+                i{
+                    color: #00356B;
+                }
+            }
+            #nav-btn{
+                @include tran;
+                padding: 0.3em 0.8em;
+                color: white;
+                background-color: #00356B;
+                border: none;
+                outline: none;
+                box-shadow: none;
+                font-size: 2rem;
+                border-radius: 1rem;
+                
+                &:hover{
+                    background-color: #002a53;
+                }
+            }
+        }
+    }
+}
+.search-bar{
+    background-color: #00356B;
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+    .sr-con{
+        width: 60rem;
+        height: 5rem;
+        border: 1px solid white;
+        padding: 0 2rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 2rem;
+
+        #sr-bar{
+            width: 90%;
+            height: 100%;
+            background-color: transparent;
+            outline: none;
+            font-size:2rem ;
+            color: white;
+            border: none;
+        }
+        i{
+            color: white;
+            font-size: 2.5rem;
+        }
+    }
+
+}
+#display{
+    padding: 2rem 0;
+    .display-con{
+        @include container;
+        #box{
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            .load{
+                position: fixed;
+                left: 45%;
+                margin: auto;
+                color: white;
+                font-size: 2rem;
+                width:7ch;
+                overflow: hidden;
+                white-space:nowrap ;
+
+                animation:text 5s ease-in-out forwards infinite ;
+            }
+            @keyframes text {
+                0%{width: 7ch;}
+                25%{width: 9ch;}
+                50%{width: 7ch;}
+                75%{width: 9ch;}
+            }
+            li{
+                @include tran;
+                background-color: rgba(255, 255, 255, 0.322);
+                width: 20rem;
+                height: 30rem;
+                border-radius: 2rem;
+                margin: 1.5rem;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.151) 0px 8px 16px, rgba(0, 0, 0, 0.151) 0px 16px 32px, rgba(0, 0, 0, 0.151) 0px 32px 64px;
+                &:hover{
+                    transform: scale(1.1,1.1);
+                }
+
+                .img{
+                    width: 15rem;
+                    height: 15rem;
+                    margin-top: 2rem;
+                    border-radius: 2rem;
+                    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 2rem;
+                        object-fit: cover;
+                        object-position: center;
+                    }
+                }
+                h2{
+                    margin: 2rem 0 0.5rem 0;
+                    text-transform: capitalize;
+                }
+                i{
+                    font-size: 3rem;
+                    color: white;
+                    margin-top: 1rem;
+                }
+            }
+        }
+
+    }
+}
