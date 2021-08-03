@@ -72,7 +72,7 @@ html{
     .sr-con{
         width: 60rem;
         height: 5rem;
-        border: 1px solid white;
+        border: 2px solid white;
         padding: 0 2rem;
         display: flex;
         flex-direction: row;
@@ -88,6 +88,9 @@ html{
             font-size:2rem ;
             color: white;
             border: none;
+            &::placeholder{
+                color: rgba(255, 255, 255, 0.486);
+            }
         }
         i{
             color: white;

@@ -88,7 +88,7 @@ html {
 .search-bar .sr-con {
   width: 60rem;
   height: 5rem;
-  border: 1px solid white;
+  border: 2px solid white;
   padding: 0 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -114,6 +114,22 @@ html {
   font-size: 2rem;
   color: white;
   border: none;
+}
+
+.search-bar .sr-con #sr-bar::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.486);
+}
+
+.search-bar .sr-con #sr-bar:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.486);
+}
+
+.search-bar .sr-con #sr-bar::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.486);
+}
+
+.search-bar .sr-con #sr-bar::placeholder {
+  color: rgba(255, 255, 255, 0.486);
 }
 
 .search-bar .sr-con i {

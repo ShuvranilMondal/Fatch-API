@@ -24,6 +24,26 @@ navBtn.addEventListener('click',()=>{
 
 let barVal = document.getElementById('sr-bar');
 
+let li = box.getElementsByTagName('li');
+
+let searchFilter=()=>{
+    let seVal = barVal.value;
+    for(let i = 0 ; i < li.length ; i++){
+        let h2 = li[i].getElementsByTagName('h2')[0];
+        if(h2.innerHTML.toLowerCase().indexOf(seVal.toLowerCase()) > -1){
+            li[i].style.display = '';
+        }else{
+            li[i].style.display = 'none';
+        }
+    }
+}
+
+
+
+
+
+
 barVal.addEventListener('keyup',()=>{
-    console.log(barVal.value);
+    searchFilter();
 })
+
